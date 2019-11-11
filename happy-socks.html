@@ -6,7 +6,7 @@
     <meta name="author" content="Ed Burtnieks" />
     <meta name="description" content="Personal portfolio" />
 
-    <title>Ed Burtnieks | Front-end Developer</title>
+    <title>Ed Burtnieks | Happy Socks</title>
 
     <link href="https://edburtnieks.me" rel="canonical" />
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -39,50 +39,72 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+              <a class="nav-link js-scroll-trigger" href="/">Home</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contacts">Contact Me</a>
+              <a class="nav-link js-scroll-trigger" href="#projects">Other Projects</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="https://github.com/edburtnieks" rel="noopener noreferrer" target="_blank">
-                <i class="fab fa-github"></i> GitHub <i class="fas fa-external-link-alt"></i>
-              </a>
+              <a class="nav-link js-scroll-trigger" href="#contacts">Contacts</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <header>
+    <header class="space-md-top">
       <div class="container">
         <div class="row d-flex align-content-center">
-          <div class="col-md-7">
-            <div class="headline">
+          <div class="col-md-6">
+            <div class="headline mt-0 mb-0">
               <div class="headline-content">
                 <h1 class="headline-title display-3">
-                  Heyy! I’m Ed,
+                  Happy Socks
                 </h1>
 
-                <p class="headline-subtitle">
-                  currently located in Riga, Latvia and I do Front-end Development.
-                </p>
-
-                <a class="mr-4" href="https://github.com/edburtnieks" rel="noopener noreferrer" target="_blank">
-                  <i class="fab fa-github"></i> GitHub <i class="fas fa-external-link-alt"></i>
-                </a>
-
-                <a href="mailto:edburtnieks@gmail.com" rel="noopener noreferrer" target="_blank">
-                  <i class="fas fa-envelope"></i> edburtnieks@gmail.com <i class="fas fa-external-link-alt"></i>
+                <a class="mr-4" href="https://www.happysocks.com" rel="noopener noreferrer" target="_blank">
+                  Live site <i class="fas fa-external-link-alt"></i>
                 </a>
               </div>
             </div>
           </div>
+
+          <div class="col-md-6">
+            <p class="lead mt-3">
+              My role in Happy Socks team was QA testing. I was responsible for making sure that all translations are correct for stores that were to
+              go live.
+            </p>
+
+            <p class="lead mt-3">
+              I was also in charge of adjusting and checking if all the necessary checkout fields are set correctly for different stores.
+            </p>
+
+            <p class="lead">
+              I had to do a lot of communication, letting development team, project manager and project owner know if there are any issues that needs
+              to be adjusted.
+            </p>
+          </div>
         </div>
       </div>
     </header>
+
+    <section class="container space-md-bottom">
+      <div class="row d-flex justify-content-start">
+        <div class="col-md-2">
+          <ul class="list-unstyled project-intro">
+            <li class="title">Technologies</li>
+
+            <li>
+              <a href="https://magento.com" rel="noopener noreferrer" target="_blank">
+                Magento / Magento 2
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <section class="space-md projects-section" id="projects">
       <div id="portfolio" class="container">
@@ -103,18 +125,6 @@
         </div>
 
         <div class="grid" data-cols="3" data-margin="30" data-height="1" data-masonry='{ "columnWidth": 200, "itemSelector": ".entry" }'>
-          <div class="entry work-entry w2">
-            <a href="happy-socks.html">
-              <div class="entry-image imageBG" data-img="images/happy-socks.png"></div>
-
-              <div class="work-entry-hover">
-                <div class="work-entry-content">
-                  <div class="work-entry-title">Happy Socks</div>
-                </div>
-              </div>
-            </a>
-          </div>
-
           <div class="entry work-entry">
             <!-- <a href="elekcig.html"> -->
               <div class="entry-image imageBG" data-img="images/elekcig.png"></div>
@@ -140,7 +150,7 @@
             <!-- </a> -->
           </div>
             
-          <div class="entry work-entry example w2">
+          <div class="entry work-entry example">
             <!-- <a href="hdf.html"> -->
               <div class="entry-image imageBG" data-img="images/hdf.png"></div>
 

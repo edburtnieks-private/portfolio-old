@@ -6,7 +6,7 @@ Licensed under  CC BY 3.0
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-@import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap');
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,9 +36,13 @@ Change your color here
   background: var(--primary-color);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding-top: 120px;
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
 .h1,
@@ -76,7 +80,7 @@ a.link {
 }
 
 a.link::before {
-  content: "";
+  content: '';
   width: 100%;
   height: 2px;
   background: #d9d9d9;
@@ -93,6 +97,16 @@ a.link:hover {
 
 a.link:hover::before {
   background: #000;
+}
+
+@media (min-width: 1024px) {
+  .space-md-top {
+    padding-top: 90px;
+  }
+}
+
+.space-md-bottom {
+  padding-bottom: 90px;
 }
 
 .space-md {
@@ -134,10 +148,12 @@ a.link:hover::before {
     -webkit-transform: scale(1);
     border: 5px solid #222;
   }
+
   50% {
     -webkit-transform: scale(0);
     border: 30px solid #222;
   }
+
   100% {
     -webkit-transform: scale(1);
     border: 10px solid #222;
@@ -150,11 +166,13 @@ a.link:hover::before {
     transform: scale(1);
     border: 5px solid #222;
   }
+
   50% {
     -webkit-transform: scale(0);
     transform: scale(0);
     border: 30px solid #222;
   }
+
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -178,6 +196,8 @@ Navigation
   color: rgb(0, 0, 0);
   font-weight: 700;
   letter-spacing: 0.04rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .navbar-brand {
@@ -199,7 +219,12 @@ Header intro
 .headline {
   position: relative;
   margin-bottom: 100px;
-  margin-top: 100px;
+}
+
+@media (min-width: 1024px) {
+  .headline {
+    margin-top: 100px;
+  }
 }
 
 .headline-content {
@@ -207,12 +232,34 @@ Header intro
   position: relative;
 }
 
+.headline-content a {
+  display: block;
+  font-weight: 700;
+}
+
+@media (min-width: 425px) {
+  .headline-content a {
+    display: inline-block;
+  }
+}
+
 .headline-content .headline-title {
+  font-size: 2.8rem;
   font-weight: 900;
+}
+
+@media (min-width: 425px) {
+  .headline-content .headline-title {
+    font-size: 4.5rem;
+  }
 }
 
 .headline-subtitle {
   font-size: 24px;
+}
+
+.projects-section {
+  background-color: var(--light);
 }
 
 /* Portfolio */
@@ -225,7 +272,13 @@ Header intro
 
 #filters li {
   display: inline-block;
-  margin-right: 100px;
+  margin-right: 20px;
+}
+
+@media (min-width: 425px) {
+  #filters li {
+    margin-right: 50px;
+  }
 }
 
 #filters li:last-child {
@@ -241,7 +294,7 @@ Header intro
 }
 
 #filters li a::after {
-  content: "";
+  content: '';
   width: 0;
   height: 3px;
   position: absolute;
@@ -279,7 +332,8 @@ Header intro
   transition: all 0.3s ease-in-out;
 }
 
-.entry:hover .entry-image {
+.entry a:hover .entry-image,
+.entry a:focus .entry-image {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -298,7 +352,8 @@ Header intro
   transition: all 0.2s ease-in-out;
 }
 
-.entry:hover .work-entry-hover {
+.entry a:hover .work-entry-hover,
+.entry a:focus .work-entry-hover {
   opacity: 1;
   visibility: visible;
 }
@@ -330,8 +385,10 @@ Header intro
   color: #fff;
 }
 
-.entry:hover .work-entry-title,
-.entry:hover .work-entry-cat {
+.entry a:hover .work-entry-title,
+.entry a:hover .work-entry-cat,
+.entry a:focus .work-entry-title,
+.entry a:focus .work-entry-cat {
   opacity: 1;
   top: 0;
 }
@@ -351,36 +408,22 @@ Header intro
 
 /* Footer */
 
+.contact-email {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+@media (min-width: 425px) {
+  .contact-email {
+    font-size: 1.75rem;
+  }
+}
+
 .footer {
   margin-top: 115px;
-}
-
-.footer .footer-title {
-  margin-bottom: 100px;
-}
-
-.footer ul {
-  margin-top: 30px;
-}
-
-.footer ul li {
-  margin-bottom: 10px;
 }
 
 .copy {
   font-weight: 600;
   color: #000;
-}
-
-/* Conatact */
-
-.contact .form-control {
-  display: block;
-  width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 1.875rem 0.85rem;
-  color: #495057;
-  background-color: #fff;
-  border: 1px solid #e9ecef;
-  border-radius: 0;
 }
